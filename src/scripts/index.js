@@ -1,1 +1,2 @@
-import "./components/burguer-component/burguer-component.js";
+import "../components/icons/icons.js";
+import "../components/profile/profile.js";

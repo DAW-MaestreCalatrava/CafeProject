@@ -1,0 +1,19 @@
+
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #e89a2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+
+  .icon:hover {
+    background-color: #d37f20;
+  }
+
