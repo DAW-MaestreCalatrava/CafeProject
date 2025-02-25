@@ -16,11 +16,10 @@ class Footer extends HTMLElement {
                 <div class="left">
                     <my-text size="body" color="#888888">Copyright &copy; 2025 Onza Cafe Team</my-text>
                 </div>
-                <div class="right">
-                    <i class="fa-brands fa-facebook icon"></i>
-                    <i class="fa-brands fa-twitter icon"></i>
-                    <i class="fa-brands fa-instagram icon"></i>
-                    <slot name="deliveries"></slot>
+                <div class="right"> 
+                    <icons-component icon="instagram" link="${this.getAttribute("instagram")}"></icons-component>
+                    <icons-component icon="facebook" link="${this.getAttribute("facebook")}"></icons-component> 
+                    <icons-component icon="slack" link="${this.getAttribute("slack")}"></icons-component> 
                 </div>
             </footer>
         `;
