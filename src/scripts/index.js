@@ -1,1 +1,1 @@
-import "./components/burguer-component/burguer-component.js";
+import "./src/components/text/text.js";
