@@ -4,17 +4,11 @@
 
 /* Raleway */
 
-@font-face {
-    font-family: 'Raleway';
-    src: url('https://fonts.googleapis.com/css?family=Raleway');
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 /* Open Sans */
 
-@font-face {
-    font-family: 'OpenSans';
-    src: url('https://fonts.googleapis.com/css?family=Open+Sans');
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* Icons */
 
