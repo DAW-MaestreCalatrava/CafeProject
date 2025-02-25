@@ -1,4 +1,4 @@
-import "./src/scripts/index.js";
+import "./src/components/text/text.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
 
