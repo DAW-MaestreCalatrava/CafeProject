@@ -21,8 +21,6 @@ class ButtonComponent extends HTMLElement {
 
     render() {
 
-        console.log(this.active);
-
         this.shadowRoot.adoptedStyleSheets.push(styles);
 
         this.shadowRoot.innerHTML = /*html*/`
