@@ -1,0 +1,21 @@
+
+.title {
+    color: #d87d1e;
+    font-size: 24px;
+}
+.subtitle {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.description {
+    color: #666;
+    margin: 10px 0 20px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 100%;
+    margin: 0 5%;
+}
+
