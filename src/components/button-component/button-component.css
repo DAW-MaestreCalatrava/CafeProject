@@ -1,0 +1,40 @@
+button {
+    padding: 10px;
+    border: none;
+
+    font-family: "Open Sans";
+    
+    cursor: pointer;
+    color: black;
+}
+
+button.link {
+    background-color: transparent;
+}
+
+button.link.active {
+    background-color: black;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button.link:hover,
+button.link.active:hover {
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    color: black;
+}
+
+button.primary {
+    background-color: #E89B2F;
+    border-radius: 10px;
+}
+
+button.primary:hover {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
