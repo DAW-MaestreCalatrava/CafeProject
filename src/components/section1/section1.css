@@ -1,0 +1,27 @@
+section {
+    width: 100%;
+    padding: 20px 0;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 15px;
+}
+
+section>div {
+    width: fit-content;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+section>div>my-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
