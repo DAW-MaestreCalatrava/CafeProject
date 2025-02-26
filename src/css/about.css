@@ -1,0 +1,26 @@
+section {
+    max-width: 800px;
+
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section>hr {
+    width: 50%;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0), rgba(128, 128, 128, 1), rgba(128, 128, 128, 0));
+}
+
+section>div {
+    display: flex;
+    justify-content: center;
+}
+
+my-text[size="body"] {
+    font-weight: bolder;
+}
