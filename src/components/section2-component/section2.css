@@ -1,0 +1,43 @@
+my-text[size="title"] {
+  text-align: center;
+}
+
+my-text[size="body"] {
+  text-align: center;
+}
+
+my-text[size="subtitle"] {
+  margin-bottom: 5px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.seccion {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 150px;
+}
+
+.seccion my-text[size="body"] {
+  max-width: 100%;
+  font-size: 13px;
+  text-align: justify;
+  word-wrap: break-word;
+  word-break: break-word;
+  padding: 5px;
+  margin: 0;
+}

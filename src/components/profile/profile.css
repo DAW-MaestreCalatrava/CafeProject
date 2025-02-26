@@ -12,6 +12,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 200px;
   margin: 100px;
+  overflow: hidden; /* Evita que el contenido se desborde */
 }
 .profile-image img {
   width: 100px;
@@ -29,9 +30,12 @@
 .profile-desc {
   font-size: 14px;
   color: #444444;
+  word-wrap: break-word;
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
 
-.profile-social{
+.profile-social {
   display: flex;
   justify-content: center;
   gap: 10px;
