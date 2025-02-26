@@ -15,10 +15,10 @@ class profile extends HTMLElement {
                 <img src="${this.getAttribute("image")}" alt="imagen de perfil">
             </div>
             <div class="profile-name">
-                <h3>${this.getAttribute("name") || "Nombre"}</h3>
+                <my-text size="subtitle">${this.getAttribute("name") || "Nombre"}</my-text>
             </div>
             <div class="profile-desc">
-                <p>${this.getAttribute("desc") || "Descripcion"}</p>
+                <my-text size="body">${this.getAttribute("desc") || "Descripcion"}</my-text>
             </div>
             <div class="profile-social">
             <icons-component icon="facebook" link="${this.getAttribute("facebook")}"></icons-component>

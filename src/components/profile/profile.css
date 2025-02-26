@@ -35,7 +35,7 @@
   text-overflow: ellipsis;
 }
 
-.profile-social {
+.profile-social{
   display: flex;
   justify-content: center;
   gap: 10px;
