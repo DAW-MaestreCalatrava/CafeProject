@@ -2,7 +2,7 @@ header {
     width: calc(100% - 20px);
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Cambio para que se vea mas centrado  */
     align-items: center;
 
     padding: 0px 10px;
