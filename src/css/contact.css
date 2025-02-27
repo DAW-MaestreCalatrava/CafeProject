@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(211, 211, 211);
+    
+}
+.description {
+    text-align: center;
+}
+my-text[size="subtitle"] {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 5%;
+}

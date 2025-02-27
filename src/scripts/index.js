@@ -13,3 +13,8 @@ import "../components/button-component/button-component.js";
 import "../components/header/header.js";
 import "../components/form/form.js";
 import "../components/section2-component/section2.js";
+import "../components/button-component/button-component.js";
+import "../components/form/form.js";
+
+
+
