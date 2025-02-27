@@ -1,7 +1,5 @@
-import "./src/components/text/text.js";
+import "./src/scripts/index.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-
-    // TODO: initialize javascript components.
 
 });
