@@ -29,6 +29,8 @@ button.link.active:hover {
 button.primary {
     background-color: #E89B2F;
     border-radius: 10px;
+    border: solid 1px transparent;
+    transition: all 500ms;
 }
 
 button.primary:hover {

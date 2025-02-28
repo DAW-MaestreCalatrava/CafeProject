@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const url = window.location.pathname.split('/').pop();
 
-    console.log(url);
-
     const buttons = [
         { text: 'Home', link: './', active: !url },
         { text: 'About', link: './about.html', active: url.includes('about') },
