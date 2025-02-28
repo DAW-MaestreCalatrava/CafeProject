@@ -35,7 +35,7 @@ class HeaderComponent extends HTMLElement {
                 <img src="${this.img}" alt="logo"/>
                 <div class="buttons">
                     ${this._buttons.map(button => /*html*/`
-                        <button-component active="${button.active}" type="link" onClick="window.open('${button.link}', '_blank')">
+                        <button-component active="${button.active}" type="link" onClick="window.location.href = '${button.link}'">
                             ${button.text}
                         </button-component>
                     `).join('')}
