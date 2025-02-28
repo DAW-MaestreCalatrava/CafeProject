@@ -39,3 +39,16 @@ h3 {
     color: white;
     background-color: black;
 }
+
+:host {
+    position: absolute;
+    top: 150vh;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    transition: all 300ms;
+}
+
+:host(.show) {
+    top: 50%;
+}

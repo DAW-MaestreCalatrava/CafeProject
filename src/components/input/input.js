@@ -1,27 +1,43 @@
+import styles from "./input.css" with { type: 'css' };
+
 class CustomInput extends HTMLElement {
+
+    static get observedAttributes() {
+        return ['placeholder', 'value'];
+    }
+
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
 
-        // Crear elementos
-        const input = document.createElement('input');
-        input.classList.add('custom-input');
+        this.placeholder = this.getAttribute('placeholder') || '';
+        this.value = this.getAttribute('value') || '';
+    }
 
-        // Aplicar el placeholder si el atributo existe
-        const placeholder = this.getAttribute('placeholder') || '';
-        input.setAttribute('placeholder', placeholder);
+    render() {
+        this.shadowRoot.adoptedStyleSheets.push(styles);
 
-        // Crear estilo
-        const style = document.createElement('link');
-        style.setAttribute('rel', 'stylesheet');
-        style.setAttribute('href', new URL('./input.css', import.meta.url));
+        this.shadowRoot.innerHTML = /*html*/`
+            <input placeholder="${this.placeholder}">
+        `;
+    }
 
-        // Agregar elementos al Shadow DOM
-        this.shadowRoot.append(style, input);
+    connectedCallback() {
+        this.render();
+
+        this.input = this.shadowRoot.querySelector('input');
+
+        this.input.addEventListener('input', () => {
+            this.value = this.input.value;
+            this.setAttribute('value', this.value);
+        });
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'placeholder') this.placeholder = newValue;
+        if (name === 'value') this.value = newValue;
     }
 }
 
-
 // Definir el custom element
 customElements.define('custom-input', CustomInput);
-

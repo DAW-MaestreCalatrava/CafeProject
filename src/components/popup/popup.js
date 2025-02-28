@@ -15,6 +15,7 @@ class Popup extends HTMLElement {
         this.message = this.getAttribute('message') || '';
         this.id = this.getAttribute('id') || '';
         this.date = this.getAttribute('date') || '';
+        this.closeBtn = null;
     }
 
     render() {
@@ -35,20 +36,15 @@ class Popup extends HTMLElement {
             <p><strong>Fecha:</strong> ${new Date(this.date).toLocaleString()}</p>
             </div>
         `;
+        
+        this.closeBtn = this.shadowRoot.querySelector('.close-btn');
+        this.closeBtn.addEventListener('click', () => {
+            this.className = '';
+        });
     }
 
     connectedCallback() {
         this.render();
-
-        this.closeBtn = this.shadowRoot.querySelector('.close-btn');
-
-        this.closeBtn.addEventListener('click', () => {
-
-            console.log('click');
-
-            this.class = '';
-            this.render();
-        });
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
