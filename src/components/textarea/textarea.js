@@ -1,23 +1,33 @@
+import styles from "./textarea.css" with { type: 'css' };
+
 class CustomTextarea extends HTMLElement {
+
+    static get observedAttributes() {
+        return ['placeholder'];
+    }
+
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
 
-        // Crear el textarea
-        const textarea = document.createElement('textarea');
-        textarea.classList.add('custom-textarea');
+        this.placeholder = this.getAttribute('placeholder') || '';
+    }
 
-        // Aplicar el placeholder si el atributo existe
-        const placeholder = this.getAttribute('placeholder') || '';
-        textarea.setAttribute('placeholder', placeholder);
+    render() {
+        this.shadowRoot.adoptedStyleSheets.push(styles);
 
-        // Crear estilo
-        const style = document.createElement('link');
-        style.setAttribute('rel', 'stylesheet');
-        style.setAttribute('href', new URL('./textarea.css', import.meta.url));
+        this.shadowRoot.innerHTML = /*html*/`
+            <textarea placeholder="${this.placeholder}"></textarea>
+        `;
+    }
 
-        // Agregar elementos al Shadow DOM
-        this.shadowRoot.append(style, textarea);
+    connectedCallback() {
+        this.render();
+        this.textarea = this.shadowRoot.querySelector('textarea');
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'placeholder') this.placeholder = newValue;
     }
 }
 
