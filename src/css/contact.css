@@ -1,13 +1,23 @@
 body {
-    background-color: rgb(211, 211, 211);
-    
+    background-color: rgb(211, 211, 211); 
+    min-height: 100vh;
 }
+
 .description {
     text-align: center;
 }
+
 my-text[size="subtitle"] {
     font-weight: bold;
 }
-.section {
-    margin-bottom: 5%;
+
+hr {
+    width: 90%;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0), rgba(128, 128, 128, 1), rgba(128, 128, 128, 0));
+}
+
+contact-form {
+    width: 100%;
 }
