@@ -43,10 +43,12 @@ class Section extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue === newValue) return;
         if (name === 'img') this.img = newValue;
         if (name === 'title') this.title = newValue;
         if (name === 'description') this.description = newValue;
         if (name === 'button') this.button = newValue;
+        this.render();
     }
 }
 
