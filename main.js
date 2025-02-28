@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(url);
 
     const buttons = [
-        { text: 'Home', link: './', active: url.includes('index') || url === '/' },
+        { text: 'Home', link: './', active: url.includes('index') || url === './' || url === '/' },
         { text: 'About', link: './about.html', active: url.includes('about') },
         { text: 'Contact', link: './contact.html', active: url.includes('contact') }
     ];
