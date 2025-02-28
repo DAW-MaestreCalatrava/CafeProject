@@ -3,7 +3,7 @@ import styles from "./textarea.css" with { type: 'css' };
 class CustomTextarea extends HTMLElement {
 
     static get observedAttributes() {
-        return ['placeholder'];
+        return ['placeholder', 'value'];
     }
 
     constructor() {
@@ -11,6 +11,7 @@ class CustomTextarea extends HTMLElement {
         this.attachShadow({ mode: 'open' });
 
         this.placeholder = this.getAttribute('placeholder') || '';
+        this.value = this.getAttribute('value') || '';
     }
 
     render() {
@@ -24,10 +25,16 @@ class CustomTextarea extends HTMLElement {
     connectedCallback() {
         this.render();
         this.textarea = this.shadowRoot.querySelector('textarea');
+
+        this.textarea.addEventListener('input', () => {
+            this.value = this.textarea.value;
+            this.setAttribute('value', this.value);
+        });
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name === 'placeholder') this.placeholder = newValue;
+        if (name === 'value') this.value = newValue;
     }
 }
 

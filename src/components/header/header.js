@@ -26,7 +26,6 @@ class HeaderComponent extends HTMLElement {
 
     render() {
 
-        console.log(this._buttons);
 
         this.shadowRoot.adoptedStyleSheets.push(styles);
 

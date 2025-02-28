@@ -6,7 +6,6 @@ class ContactForm extends HTMLElement {
         // Crear contenedor
         const container = document.createElement('div');
         container.innerHTML = `
-
             <form class="contact-form">
                 <custom-input placeholder="Name"></custom-input>
                 <custom-input placeholder="Email"></custom-input>
@@ -14,6 +13,27 @@ class ContactForm extends HTMLElement {
                 <button-component type="primary">Send Message</button-component>
             </form>
         `;
+
+        container.querySelector('button-component').addEventListener('click', (ev) => {
+            ev.preventDefault();
+
+            const name = this.shadowRoot.querySelector('custom-input[placeholder="Name"]').getAttribute('value');
+            const email = this.shadowRoot.querySelector('custom-input[placeholder="Email"]').getAttribute('value');
+            const message = this.shadowRoot.querySelector('custom-textarea[placeholder="Message"]').getAttribute('value');
+
+            const formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Dispatch custom event with form data
+            this.dispatchEvent(new CustomEvent('formSubmit', {
+                detail: formData,
+                bubbles: true,
+                composed: true
+            }));
+        });
 
         // Agregar estilos
         const style = document.createElement('link');

@@ -6,6 +6,8 @@ button {
     
     cursor: pointer;
     color: black;
+
+    transition: all 500ms;
 }
 
 button.link {
