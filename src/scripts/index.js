@@ -9,3 +9,4 @@ import "../components/header/header.js";
 import "../components/form/form.js";
 import "../components/section2-component/section2.js";
 import "../components/section1/section1.js";
+import "../components/headerfooter-component/headerfooter-component.js";

@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/reset.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/reset.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="../main.js"></script>
 
     <title>Index</title>
 </head>
 <body>
-
-    <section2-component titulo="HOLA", pPrincipal="LALALFSDGKOSFJGOSDFOIGJHWROIGJIOWR", h2Seccion1="SECCION1", pSeccion1="SECCION1SECCION1SECCION1SECCION1SECCION1 SECCION1SECCION1SECCION1SECCION1SECCION1 SECCION1SECCION1SECCION1SECCION1SECCION1", h2Seccion2="SECCION2", pSeccion2="SECCION2SECCION2SECCION2SECCION2SECCION2SECCION2", h2Seccion3="SECCION3", pSeccion3="SECCION3SECCION3SECCION3SECCION3SECCION3"></section2-component>
-
+    <headerfooter-component>
+        <main>
+            <section1-component img="./src/img/cafe.jpg" title="Onza Café"
+                description="Somos todo el equipo detrás de los mejores cafés y la mejor repostería de Ciudad Real"
+                button="Ver menu"></section1-component>
     
-    <profile-component image="../src/img/logo.jpg" name="Jhon" desc="descdescdescdescdescdescdescdescdescdescdescdescdescdesc" twitter="x.com" linkedin="linkedin.com" facebook="facebook.com"></profile-component>
-    <icons-component icon="facebook" link="${this.getAttribute("facebook")}"></icons-component>
-    <icons-component icon="instagram" link="${this.getAttribute("instagram")}"></icons-component>
+            <section2-component titulo="¿QUE OFRECEMOS"
+                pPrincipal="En Onza Café, queremos ofrecerte una experiencia única donde el buen café, el sabor y la calidad se unen."
+                h2Seccion1="Café de especialidad"
+                pSeccion1="Disfruta de una selección de granos de alta calidad, cuidadosamente tostados y preparados con pasión para ofrecerte la mejor experiencia en cada sorbo."
+                h2Seccion2="Repostería artesanal"
+                pSeccion2="Acompaña tu café con nuestra variedad de pasteles, tartas y dulces caseros, elaborados con ingredientes frescos y mucho cariño."
+                h2Seccion3="Opciones para todos los gustos"
+                pSeccion3="Desde desayunos nutritivos hasta snacks saludables y opciones veganas, tenemos algo delicioso para cada momento del día."></section2-component>
+        </main>
     
-    <my-text size="title" color="red" alignCenter>Titulo</my-text>
-    <my-text size="subtitle" color="blue" alignCenter>Subtitulo</my-text>
-    <my-text size="body" color="green" alignCenter>Parrafo</my-text>
-    <custom-input></custom-input>
-    <custom-textarea></custom-textarea>
+    </headerfooter-component>
+    
+
 </body>
 
 </html>
