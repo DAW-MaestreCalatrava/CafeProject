@@ -11,7 +11,7 @@ class HeaderFooter extends HTMLElement {
     // Render the component's HTML structure
     this.shadowRoot.adoptedStyleSheets.push(styles);
     this.shadowRoot.innerHTML = /*html*/ `
-      <header-component img="../src/img/logo.jpg"></header-component>
+      <header-component img="./src/img/logo.jpg"></header-component>
       <slot></slot>
       <my-footer></my-footer>
     `;
